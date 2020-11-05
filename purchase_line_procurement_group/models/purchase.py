@@ -7,7 +7,7 @@ class PurchaseOrderLine(models.Model):
 
     _inherit = 'purchase.order.line'
 
-    procurement_group_id = fields.Many2one('procurement.group')
+    procurement_group_id = fields.Many2one('procurement.group', copy=False)
 
     def _merge_in_existing_line(self, product_id, product_qty, product_uom,
                                 location_id, name, origin, values):
