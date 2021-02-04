@@ -10,7 +10,6 @@
             [
                 ('product_id.product_tmpl_id', 'in', active_ids),
                 ('state', 'in', ['purchase', 'done']),
-                ('date_order', '&gt;=', (datetime.datetime.utcnow() - datetime.timedelta(days=365)).strftime('%Y-%m-%d %H:%M:%S'))
             ]
         </field>
         <field name="name">Purchases</field>
@@ -24,7 +23,6 @@
             [
                 ('product_id', 'in', active_ids),
                 ('state', 'in', ['purchase', 'done']),
-                ('date_order', '&gt;=', (datetime.datetime.utcnow() - datetime.timedelta(days=365)).strftime('%Y-%m-%d %H:%M:%S'))
             ]
         </field>
         <field name="name">Purchases</field>
